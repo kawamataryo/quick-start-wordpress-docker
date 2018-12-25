@@ -1,11 +1,11 @@
 # What is This ?
-DockerによるWordpressのローカル環境構築を行うためのリポジトリです。
+DockerによるWordpressのローカル環境構築を行うためのリポジトリ
 
 # Features
 * Dockerによるwordpressのローカル環境構築
 * wordmoveへの本番環境デプロイ, バックアップ
 
-# How to use ?
+# How to start wordpress ?
 ### 1. 環境変数の設定
 .envにdocker-composeで使う環境変数を定義しています。
 コメントを元に記載してください。
@@ -73,3 +73,8 @@ docker-composeで関連コンテナを停止します。
 ```
 $ docker-compose stop
 ```
+# How to use wordmove ?
+
+# TODO
+* wordmoveで毎回ssh-addの設定を行う手間を削減（commandで行う？）
+* MySQLのデータ永続化の設定追加

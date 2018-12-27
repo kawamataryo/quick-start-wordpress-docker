@@ -37,9 +37,9 @@ services:
         volumes:
             - ./config:/home/
             - ./public:/var/www/html
-            - ~/.ssh:/home/wordmove/.ssh
+            - ~/.ssh:/home/.ssh
         environment:
-            SERVER_PORT: "${LOCAL_SERVER_PORT}"
+            LOCAL_SERVER_PORT: "${LOCAL_SERVER_PORT}"
             PRODUCTION_URL: "${PRODUCTION_URL}"
             PRODUCTION_DIR_PATH: "${PRODUCTION_DIR_PATH}"
             PRODUCTION_DB_NAME: "${PRODUCTION_DB_NAME}"

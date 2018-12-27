@@ -65,7 +65,11 @@ $ docker-compose up -d
 $ open http://localhost:8080
 ```
 
-### 4. Dockerコンテナの停止
+### 4. htaccessの修正
+そのままだと動かない場合があるので、public/.htaccessを修正します。
+
+
+### 5. Dockerコンテナの停止
 docker-composeで関連コンテナを停止します。  
 
 参考：  
@@ -100,7 +104,7 @@ $ docker exec -w /home/ -it wordmoveのコンテナ名 /bin/bash
 $ ssh-agent bash
 
 # ssh-agentの登録。
-$ ssh-add /home/root/.ssh/id_rsa
+$ ssh-add /home/.ssh/id_rsa
 ```
 
 ### 3. 同期・デプロイ

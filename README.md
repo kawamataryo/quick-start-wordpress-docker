@@ -67,7 +67,10 @@ $ open http://localhost:8080
 
 ### 4. Dockerコンテナの停止
 docker-composeで関連コンテナを停止します。  
-※ docker-compose downを行うと、DBのデータも初期化されてしまうので、注意。もし永続化したい場合は以下を参考に設定を追加する。  
+
+参考：  
+docker-compose downを行うと、DBのデータも初期化されてしまうので、注意。  
+もし永続化したい場合は以下を参考に設定を追加する。  
 [DockerでMySQLのデータを保存する方法
 ](https://qiita.com/TakashiOshikawa/items/11316ffd2146b36b0d7d)
 

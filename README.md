@@ -7,7 +7,7 @@ DockerによるWordpressのローカル環境構築を行うためのリポジ�
 
 # How to start wordpress ?
 ### 1. 環境変数の設定
-.envにdocker-composeで使う環境変数を定義しています。
+.envにdocker-composeで使う環境変数を定義しています。  
 コメントを元に記載してください。
 
 ```
@@ -66,8 +66,9 @@ $ open http://localhost:8080
 ```
 
 ### 4. Dockerコンテナの停止
-docker-composeで関連コンテナを停止します。
-※ docker-compose downを行うと、DBのデータも初期化されてしまうので、注意。もし永続化したい場合は以下を参考に設定を追加する。[DockerでMySQLのデータを保存する方法
+docker-composeで関連コンテナを停止します。  
+※ docker-compose downを行うと、DBのデータも初期化されてしまうので、注意。もし永続化したい場合は以下を参考に設定を追加する。  
+[DockerでMySQLのデータを保存する方法
 ](https://qiita.com/TakashiOshikawa/items/11316ffd2146b36b0d7d)
 
 ```
@@ -84,11 +85,11 @@ $ docker exec -w /home/ -it wordmoveのコンテナ名 /bin/bash
 ```
 
 ### 2. sshの設定
-コンテナから本番環境に同期するためssh-agentの設定を行います。
-接続先サーバーとのssh接続設定、ローカルのssh/configの設定は終わっていることを前提としてます。
-またid_rsa(秘密鍵)までのパスは接続するサーバーに合わせて記載してください。
-参考:
-[エックスサーバーにSSHで接続してみよう！ | vdeep](http://vdeep.net/xserver-ssh)
+コンテナから本番環境に同期するためssh-agentの設定を行います。  
+接続先サーバーとのssh接続設定、ローカルのssh/configの設定は終わっていることを前提としてます。  
+またid_rsa(秘密鍵)までのパスは接続するサーバーに合わせて記載してください。  
+参考:  
+[エックスサーバーにSSHで接続してみよう！ | vdeep](http://vdeep.net/xserver-ssh)  
 [ssh-agentを利用して、安全にSSH認証を行う - Qiita](https://qiita.com/naoki_mochizuki/items/93ee2643a4c6ab0a20f5)
 
 ```
@@ -100,8 +101,8 @@ $ ssh-add /home/root/.ssh/id_rsa
 ```
 
 ### 3. 同期・デプロイ
-あとはコマンド一発で同期が可能です。
-本番のデータをローカルにバックアップしたい場合は、、
+あとはコマンド一発で同期が可能です。  
+本番のデータをローカルにバックアップしたい場合は、、  
 
 ```
 $ wordmove pull --all
@@ -113,8 +114,8 @@ $ wordmove pull --all
 $ wordmove push --all
 ```
 
-さらにオプション部分の指定で、DBのみthemesのみなど同期内容を変更可能です。
-参考：
+さらにオプション部分の指定で、DBのみthemesのみなど同期内容を変更可能です。  
+参考：  
 [Wordmoveの基本操作 - Qiita](https://qiita.com/mrymmh/items/c644934cac386d95b7df)
 
 # TODO

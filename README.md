@@ -65,11 +65,7 @@ $ docker-compose up -d
 $ open http://localhost:8080
 ```
 
-### 4. htaccessの修正
-そのままだと動かない場合があるので、public/.htaccessを修正します。
-
-
-### 5. Dockerコンテナの停止
+### 4. Dockerコンテナの停止
 docker-composeで関連コンテナを停止します。  
 
 参考：  

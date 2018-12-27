@@ -74,7 +74,49 @@ docker-composeで関連コンテナを停止します。
 $ docker-compose stop
 ```
 # How to use wordmove ?
+wordmoveを使えば容易に本番環境とローカル環境の同期が可能です。
+
+### 1. wordmoveのコンテナに接続
+wordmoveのコンテナが起動した状態で以下コマンドを実行します。
+
+```
+$ docker exec -w /home/ -it wordmoveのコンテナ名 /bin/bash
+```
+
+### 2. sshの設定
+コンテナから本番環境に同期するためssh-agentの設定を行います。
+接続先サーバーとのssh接続設定、ローカルのssh/configの設定は終わっていることを前提としてます。
+またid_rsa(秘密鍵)までのパスは接続するサーバーに合わせて記載してください。
+参考:
+[エックスサーバーにSSHで接続してみよう！ | vdeep](http://vdeep.net/xserver-ssh)
+[ssh-agentを利用して、安全にSSH認証を行う - Qiita](https://qiita.com/naoki_mochizuki/items/93ee2643a4c6ab0a20f5)
+
+```
+# ssh-agentの起動
+$ ssh-agent bash
+
+# ssh-agentの登録。
+$ ssh-add /home/root/.ssh/id_rsa
+```
+
+### 3. 同期・デプロイ
+あとはコマンド一発で同期が可能です。
+本番のデータをローカルにバックアップしたい場合は、、
+
+```
+$ wordmove pull --all
+```
+
+ローカルのデータを本番にアップロードしたい場合は、、
+
+```
+$ wordmove push --all
+```
+
+さらにオプション部分の指定で、DBのみthemesのみなど同期内容を変更可能です。
+参考：
+[Wordmoveの基本操作 - Qiita](https://qiita.com/mrymmh/items/c644934cac386d95b7df)
 
 # TODO
-* wordmoveで毎回ssh-addの設定を行う手間を削減（commandで行う？）
+* wordmoveで毎回ssh-addの設定を行う手間を削減（docker-composeのcommandで行う？）
 * MySQLのデータ永続化の設定追加

@@ -37,7 +37,7 @@ production:
     - 'wp-config.php'
     - 'wp-content/*.sql.gz'
     - '*.orig'
-    - "wp-content/uploads/backup*/*"
+    - "wp-content/uploads/backwpup*/*"
     - ".htaccess"
 
   ssh:

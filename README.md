@@ -1,12 +1,24 @@
-# What is This ?
+# What is This
 DockerによるWordpressのローカル環境構築を行うためのリポジトリ
 
 # Features
 * Dockerによるwordpressのローカル環境構築
 * wordmoveへの本番環境デプロイ, バックアップ
 
-# How to start wordpress ?
+# How to start
+
+### 0. 事前準備
+Macにdocker, docker-composeをインストール  
+以下参考: 
+ [Docker Compose - インストール - Qiita](https://qiita.com/zembutsu/items/dd2209a663cae37dfa81)
+
 ### 1. 環境変数の設定
+このリポジトリをクローン
+
+```
+$ git clone https://github.com/kawamataryo/quick-start-wordpress-docker.git project-dir
+```
+
 .envにdocker-composeで使う環境変数を定義しています。  
 コメントを元に記載してください。
 

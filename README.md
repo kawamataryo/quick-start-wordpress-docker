@@ -1,4 +1,4 @@
-# What is This
+# Quick-start-wordpress-docker
 DockerによるWordpressのローカル環境構築を行うためのリポジトリ
 
 # Features
@@ -113,6 +113,9 @@ $ ssh-agent bash
 
 # ssh-agentの登録。
 $ ssh-add /home/.ssh/id_rsa
+
+# rubyのエンコーディングをUTF-8に
+export RUBYOPT=-EUTF-8
 ```
 
 ### 3. 同期・デプロイ

@@ -114,7 +114,7 @@ $ ssh-agent bash
 # ssh-agentの登録。
 $ ssh-add /home/.ssh/id_rsa
 
-# rubyのエンコーディングをUTF-8に
+# wordmoveのmysql dumpで使うrubyのエンコーディング
 export RUBYOPT=-EUTF-8
 ```
 
@@ -135,6 +135,7 @@ $ wordmove push --all
 さらにオプション部分の指定で、DBのみthemesのみなど同期内容を変更可能です。  
 参考：  
 [Wordmoveの基本操作 - Qiita](https://qiita.com/mrymmh/items/c644934cac386d95b7df)
+
 
 # TODO
 * wordmoveで毎回ssh-addの設定を行う手間を削減（docker-composeのcommandで行う？）
